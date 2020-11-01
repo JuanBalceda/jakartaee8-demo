@@ -29,8 +29,8 @@ public class TodoResource {
         return Response.ok(todo).build();
     }
 
-    @Path("{id}")
     @GET
+    @Path("{id}")
     public Todo findById(@PathParam("id") Long id) {
         return todoService.findById(id);
     }
@@ -40,8 +40,8 @@ public class TodoResource {
         return todoService.getAll();
     }
 
-    @Path("complete")
     @POST
+    @Path("complete")
     public Response markAsComplete(@QueryParam("id") Long id) {
 
         Todo todo = todoService.findById(id);
