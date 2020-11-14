@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: juanbalceda
+  Date: 14/11/20
+  Time: 20:36
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>CDI Events</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+        <h:outputLabel for="email" value="Email"/>
+        <h:inputText id="email" value="#{eventsBean.user.email}"/>
+        <br/>
+        <h:outputLabel for="password" value="Password"/>
+        <h:inputSecret id="password" value="#{eventsBean.user.password}"/>
+        <br/>
+        <h:commandButton value="Login" actionListener="#{eventsBean.login}"/>
+    </h:form>
+</h:body>
+
+</html>

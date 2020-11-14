@@ -83,6 +83,15 @@ The interceptor performs cross-cutting concern tasks.
 #### Interceptor Binding Code
 It's the code that will run when a method invocation is intercepted.
 
+### CDI Events
+Events allow beans to communicate without any compile-time dependency. 
+One bean can define an event, another bean can fire the event, and yet another bean can handle the event. 
+
+- An event consists of the following: 
+    - The event object payload, a Java object
+    - Zero or more qualifier types, the event qualifiers.
+- An event handler uses an observer method to consume events, observers can be sync or async and prioritized.
+
 ## Java Persistence API (JPA 2.3)
 
 ...Coming Soon
