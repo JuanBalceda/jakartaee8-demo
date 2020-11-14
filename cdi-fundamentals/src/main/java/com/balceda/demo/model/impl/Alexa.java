@@ -1,12 +1,10 @@
 package com.balceda.demo.model.impl;
 
 import com.balceda.demo.model.VoiceAssistant;
-import com.balceda.demo.qualifier.VoiceAssistantProvider;
+import com.balceda.demo.qualifier.AlexaAssistant;
 
-import static com.balceda.demo.qualifier.VoiceAssistantProvider.Provider.ALEXA;
-
-// @com.balceda.demo.qualifiers.Alexa
-@VoiceAssistantProvider(ALEXA)
+@AlexaAssistant
+// @VoiceAssistantProvider(ALEXA)
 public class Alexa implements VoiceAssistant {
 
     @Override

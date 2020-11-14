@@ -13,7 +13,7 @@ public @interface VoiceAssistantProvider {
 
     Provider value();
 
-    public enum Provider {
+    enum Provider {
         ALEXA, SIRI
     }
 }

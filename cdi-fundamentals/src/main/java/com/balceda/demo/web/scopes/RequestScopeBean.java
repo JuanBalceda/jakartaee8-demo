@@ -1,7 +1,8 @@
-package com.balceda.demo.web;
+package com.balceda.demo.web.scopes;
 
 
 import com.balceda.demo.model.VoiceAssistant;
+import com.balceda.demo.qualifier.AlexaAssistant;
 import com.balceda.demo.qualifier.VoiceAssistantProvider;
 
 import javax.enterprise.context.RequestScoped;
@@ -15,12 +16,12 @@ import static com.balceda.demo.qualifier.VoiceAssistantProvider.Provider.*;
 public class RequestScopeBean {
 
     @Inject
-    // @Alexa
-    @VoiceAssistantProvider(ALEXA)
+    @AlexaAssistant
+    // @VoiceAssistantProvider(ALEXA)
     private VoiceAssistant alexa;
 
     @Inject
-    //@Siri
+    // @Siri
     @VoiceAssistantProvider(SIRI)
     private VoiceAssistant siri;
 

@@ -1,11 +1,12 @@
 package com.balceda.demo.model.impl;
 
 import com.balceda.demo.model.VoiceAssistant;
+import com.balceda.demo.qualifier.SiriAssistant;
 import com.balceda.demo.qualifier.VoiceAssistantProvider;
 
 import static com.balceda.demo.qualifier.VoiceAssistantProvider.Provider.SIRI;
 
-// @com.balceda.demo.qualifiers.Siri
+// @SiriAssistant
 @VoiceAssistantProvider(SIRI)
 public class Siri implements VoiceAssistant {
 
