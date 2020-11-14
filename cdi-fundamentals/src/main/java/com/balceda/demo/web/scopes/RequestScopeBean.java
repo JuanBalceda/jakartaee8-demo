@@ -1,17 +1,16 @@
 package com.balceda.demo.web.scopes;
 
-
 import com.balceda.demo.model.VoiceAssistant;
 import com.balceda.demo.qualifier.AlexaAssistant;
 import com.balceda.demo.qualifier.VoiceAssistantProvider;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 
-import static com.balceda.demo.qualifier.VoiceAssistantProvider.Provider.*;
+import static com.balceda.demo.qualifier.VoiceAssistantProvider.Provider.SIRI;
 
-@Named
 @RequestScoped
 public class RequestScopeBean {
 
@@ -25,8 +24,23 @@ public class RequestScopeBean {
     @VoiceAssistantProvider(SIRI)
     private VoiceAssistant siri;
 
-    public String greeting() {
-        return "Alexa says: " + alexa.greet() + ", Siri says: " + siri.greet();
+    // Lifecycle Callbacks
+    @PostConstruct
+    public void init() {
+        System.out.println("RequestScopeBean::init");
     }
 
+    @PreDestroy
+    public void destroy() {
+        System.out.println("RequestScopeBean::destroy");
+    }
+
+    public String greeting() {
+        return "Alexa says: " + alexa.greet() +
+                "\nSiri says: " + siri.greet();
+    }
+
+    public int getHashCode() {
+        return this.hashCode();
+    }
 }

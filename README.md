@@ -55,13 +55,18 @@ A context is a valid environment where the contextual instance can be created an
 
 This is the way to tell the container to associate a specific contextual instance with a given context
 
-- Dependent Scope (Default, beans are bound to the scope of the bean in which are injected)
-- Request Scope (Beans are bound to HTTP request)
-- Session scope (Beans are bound to HTTP session)
-- Application Scope (Beans are bound to the lifetime of the application)
-- Conversation Scope (Beans are bound to HTTP request)
+- Dependent Scope 
+    - It is the default scope, beans are bound to the scope of the bean in which are injected
+- Request Scope 
+    - Beans are bound to the HTTP request
+- Session scope 
+    - Beans are bound to the HTTP session
+- Application Scope 
+    - Beans are bound to the lifetime of the application
+- Conversation Scope 
+    - Used in JSF, beans are bound to a context similar to a session scope, but it's manually managed by the developer.
 
-## Java Persistance API (JPA 2.3)
+## Java Persistence API (JPA 2.3)
 
 ...Coming Soon
 
