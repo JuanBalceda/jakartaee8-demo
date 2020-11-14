@@ -66,6 +66,16 @@ This is the way to tell the container to associate a specific contextual instanc
 - Conversation Scope 
     - Used in JSF, beans are bound to a context similar to a session scope, but it's manually managed by the developer.
 
+### CDI Producers
+It's an API contract that enable developers to turn classes into injectable beans, 
+qualifiers can be used to avoid ambiguity.
+
+- Producer Method (Must not be a void method)
+- Producer Field
+
+#### Disposes Annotation
+Passes a produced bean to a method (Must be a void method) that allows the developer to do custom cleanups before the context instance is destroy. 
+
 ## Java Persistence API (JPA 2.3)
 
 ...Coming Soon

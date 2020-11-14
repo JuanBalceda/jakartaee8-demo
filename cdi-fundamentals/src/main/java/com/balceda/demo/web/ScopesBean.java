@@ -10,6 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 @WebRequest
 public class ScopesBean implements Serializable {
@@ -29,15 +30,18 @@ public class ScopesBean implements Serializable {
     @Inject
     private DependentScopeBean dependentScopeBean;
 
+    @Inject
+    private Logger logger;
+
     // Lifecycle Callbacks
     @PostConstruct
     public void init() {
-        System.out.println("ScopesBean::init");
+        logger.info("init::");
     }
 
     @PreDestroy
     public void destroy() {
-        System.out.println("ScopesBean::destroy");
+        logger.info("destroy::");
     }
 
     public int applicationScopeHashCode() {
