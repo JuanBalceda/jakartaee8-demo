@@ -1,5 +1,6 @@
 package com.balceda.demo.web;
 
+import com.balceda.demo.interceptor.Logged;
 import com.balceda.demo.stereotype.WebRequest;
 import com.balceda.demo.web.scopes.ApplicationScopeBean;
 import com.balceda.demo.web.scopes.DependentScopeBean;
@@ -44,18 +45,22 @@ public class ScopesBean implements Serializable {
         logger.info("destroy::");
     }
 
+    @Logged
     public int applicationScopeHashCode() {
         return applicationScopeBean.getHashCode();
     }
 
+    @Logged
     public int sessionScopeHashCode() {
         return sessionScopedBean.getHashCode();
     }
 
+    @Logged
     public int requestScopeHashCode() {
         return requestScopeBean.getHashCode();
     }
 
+    @Logged
     public int dependentScopeHashCode() {
         return dependentScopeBean.getHashCode();
     }
