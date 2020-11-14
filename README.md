@@ -77,10 +77,11 @@ qualifiers can be used to avoid ambiguity.
 Passes a produced bean to a method (Must be a void method) that allows the developer to do custom cleanups before the context instance is destroy. 
 
 ### CDI Interceptors
-It's a API construct to implement Cross-Cutting Concerns across the application (Aspect Oriented Programming)
+An interceptor is a class used to interpose in method invocations or lifecycle events that occur in an associated target class. 
+The interceptor performs cross-cutting concern tasks.
 
 #### Interceptor Binding Code
- It's the code that will run when a method invocation is intercepted.
+It's the code that will run when a method invocation is intercepted.
 
 ## Java Persistence API (JPA 2.3)
 
